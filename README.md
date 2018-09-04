@@ -10,5 +10,6 @@ Just a simple GitHub user finder.
 
 To Do:
 - [ ] Add Live demo
+- [ ] Import Google fonts
 - [ ] Add PropTypes
 - [ ] Add Docz
