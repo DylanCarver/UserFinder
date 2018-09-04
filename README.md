@@ -1,15 +1,13 @@
-# UserFinder
+# UserFinder 🔍
 
 Just a simple GitHub user finder.
+Checkout the [live demo](https://userfinder.now.sh/).
 ## Getting started
 - Clone the repo
 - Run `yarn`
 - Run `yarn dev`
 - Navigate to `http://localhost:3000`
 
-
 To Do:
-- [ ] Add Live demo
-- [x] Import Google fonts
 - [ ] Add PropTypes
 - [ ] Add Docz
