@@ -1,5 +1,13 @@
+import { injectGlobal } from 'styled-components';
 import { ServerStyleSheet } from 'styled-components';
 import Document, { Head, Main, NextScript } from 'next/document';
+
+injectGlobal`
+  body {
+    margin: 0;
+    font-family: rubik;
+  }
+`;
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {

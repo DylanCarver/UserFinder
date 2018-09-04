@@ -49,12 +49,6 @@ class SearchCard extends React.Component {
 
     return (
       <>
-        <style jsx global>{`
-          body {
-            margin: 0;
-            font-family: rubik;
-          }
-        `}</style>
         <Card>
           {user && validUsername ? (
             <UserInfo user={user} />
