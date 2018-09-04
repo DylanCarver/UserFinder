@@ -1,6 +1,6 @@
 # UserFinder 🔍
 
-Just a simple GitHub user finder.
+Just a simple tool to display some information of the given github profile.
 Checkout the [live demo](https://userfinder.now.sh/).
 ## Getting started
 - Clone the repo
