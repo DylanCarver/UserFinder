@@ -16,6 +16,10 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>User Finder</title>
+          <link
+            href="https://fonts.googleapis.com/css?family=Rubik:300,400,500"
+            rel="stylesheet"
+          />
           {this.props.styleTags}
         </Head>
         <body>
