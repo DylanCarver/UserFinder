@@ -15,7 +15,3 @@ Checkout the [live demo](https://userfinder.now.sh/).
 - [ ] Add PropTypes
 - [ ] Add Docz
 - [ ] Add Styled system
-
-## What it looks like
-
-![example](https://media.giphy.com/media/ie8xSmTr1hhB3Mad31/giphy.gif)
