@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import FadeIn from 'components/fadeIn';
 
 import Img from './img';
 
@@ -47,17 +48,27 @@ const UserInfo = props => {
   return (
     <Wrapper>
       <Row>
-        <Img src={user.avatar_url} />
+        <FadeIn>
+          <Img src={user.avatar_url} />
+        </FadeIn>
         <Info>
-          <Title>{user.name}</Title>
-          <Id>{user.id}</Id>
+          <FadeIn delay={50}>
+            <Title>{user.name}</Title>
+          </FadeIn>
+          <FadeIn delay={100}>
+            <Id>{user.id}</Id>
+          </FadeIn>
         </Info>
       </Row>
-      <BottomRow>
-        <div>{numberOf(user.public_repos, 'Public repo', 'Public repos')}</div>
-        <div>{numberOf(user.followers, 'follower', 'followers')}</div>
-        <div>{user.following} Following</div>
-      </BottomRow>
+      <FadeIn delay={150}>
+        <BottomRow>
+          <div>
+            {numberOf(user.public_repos, 'Public repo', 'Public repos')}
+          </div>
+          <div>{numberOf(user.followers, 'follower', 'followers')}</div>
+          <div>{user.following} Following</div>
+        </BottomRow>
+      </FadeIn>
     </Wrapper>
   );
 };

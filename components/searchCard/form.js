@@ -1,6 +1,7 @@
 import React from 'react';
 import Input from 'components/input';
 import styled from 'styled-components';
+import FadeIn from 'components/fadeIn';
 
 const Text = styled.p`
   font-size: 12px;
@@ -21,20 +22,23 @@ class Form extends React.Component {
 
     return (
       <FormWrapper>
-        {valid === false ? (
-          <Text>User not found. Please try again</Text>
-        ) : (
-          <Text>Search for a GitHub user</Text>
-        )}
-
-        <form onSubmit={onSubmit}>
-          <Input
-            invalid={valid === false}
-            value={value}
-            onChange={onChange}
-            placeholder="GitHub username"
-          />
-        </form>
+        <FadeIn>
+          {valid === false ? (
+            <Text>User not found. Please try again</Text>
+          ) : (
+            <Text>Search for a GitHub user</Text>
+          )}
+        </FadeIn>
+        <FadeIn delay={100}>
+          <form onSubmit={onSubmit}>
+            <Input
+              invalid={valid === false}
+              value={value}
+              onChange={onChange}
+              placeholder="GitHub username"
+            />
+          </form>
+        </FadeIn>
       </FormWrapper>
     );
   }
