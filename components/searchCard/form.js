@@ -9,7 +9,7 @@ const Text = styled.p`
 
 const FormWrapper = styled.div`
   display: flex;
-  height: 250px;
+  height: 200px;
   align-items: center;
   flex-direction: column;
   justify-content: center;

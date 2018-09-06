@@ -4,7 +4,7 @@ import Img from './img';
 
 const Wrapper = styled.div`
   display: flex;
-  height: 250px;
+  min-height: 200px;
   flex-direction: column;
   justify-content: space-between;
 `;
