@@ -1,10 +1,15 @@
 import React from 'react';
 import Card from 'components/card';
 import fetch from 'isomorphic-fetch';
+import styled from 'styled-components';
 import UserInfo from 'components/userInfo';
 
 import Form from './form';
 import BackButton from './backButton';
+
+const StyledCard = styled(Card)`
+  width: 450px;
+`;
 
 class SearchCard extends React.Component {
   state = {
@@ -49,7 +54,7 @@ class SearchCard extends React.Component {
 
     return (
       <>
-        <Card>
+        <StyledCard>
           {user && validUsername ? (
             <UserInfo user={user} />
           ) : (
@@ -60,7 +65,7 @@ class SearchCard extends React.Component {
               onChange={this.updateInput}
             />
           )}
-        </Card>
+        </StyledCard>
         <BackButton show={user && validUsername} onClick={this.resetUser} />
       </>
     );
