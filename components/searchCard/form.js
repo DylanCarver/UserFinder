@@ -17,6 +17,10 @@ const FormWrapper = styled.div`
 `;
 
 class Form extends React.Component {
+  componentDidMount = () => {
+    this.inputField.focus();
+  };
+
   render() {
     const { onSubmit, value, onChange, valid, reset } = this.props;
 
@@ -32,6 +36,9 @@ class Form extends React.Component {
         <FadeIn delay={100}>
           <form onSubmit={onSubmit}>
             <Input
+              innerRef={input => {
+                this.inputField = input;
+              }}
               invalid={valid === false}
               value={value}
               onChange={onChange}
