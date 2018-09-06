@@ -30,6 +30,13 @@ const Id = styled.p`
   letter-spacing: 1.3px;
 `;
 
+function numberOf(value, singular, plural) {
+  if (value === 1) {
+    return `${value} ${singular}`;
+  }
+  return `${value} ${plural}`;
+}
+
 const UserInfo = props => {
   const { user } = props;
 
@@ -43,8 +50,8 @@ const UserInfo = props => {
         </div>
       </Row>
       <BottomRow>
-        <div>{user.public_repos} Public repos</div>
-        <div>{user.followers} Followers</div>
+        <div>{numberOf(user.public_repos, 'Public repo', 'Public repos')}</div>
+        <div>{numberOf(user.followers, 'follower', 'followers')}</div>
         <div>{user.following} Following</div>
       </BottomRow>
     </Wrapper>
