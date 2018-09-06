@@ -10,7 +10,7 @@ Checkout the [live demo](https://userfinder.now.sh/).
 - Run `yarn dev`
 - Navigate to `http://localhost:3000`
 
-To Do:
+## To Do:
 
 - [ ] Add PropTypes
 - [ ] Add Docz

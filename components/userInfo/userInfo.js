@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import FadeIn from 'components/fadeIn';
 
 import Img from './img';
 
 const Wrapper = styled.div`
   display: flex;
-  height: 250px;
+  min-height: 200px;
   flex-direction: column;
   justify-content: space-between;
 `;
@@ -30,6 +31,10 @@ const Id = styled.p`
   letter-spacing: 1.3px;
 `;
 
+const Info = styled.div`
+  flex: 1;
+`;
+
 function numberOf(value, singular, plural) {
   if (value === 1) {
     return `${value} ${singular}`;
@@ -43,17 +48,27 @@ const UserInfo = props => {
   return (
     <Wrapper>
       <Row>
-        <Img src={user.avatar_url} />
-        <div>
-          <Title>{user.name}</Title>
-          <Id>{user.id}</Id>
-        </div>
+        <FadeIn>
+          <Img src={user.avatar_url} />
+        </FadeIn>
+        <Info>
+          <FadeIn delay={50}>
+            <Title>{user.name}</Title>
+          </FadeIn>
+          <FadeIn delay={100}>
+            <Id>{user.id}</Id>
+          </FadeIn>
+        </Info>
       </Row>
-      <BottomRow>
-        <div>{numberOf(user.public_repos, 'Public repo', 'Public repos')}</div>
-        <div>{numberOf(user.followers, 'follower', 'followers')}</div>
-        <div>{user.following} Following</div>
-      </BottomRow>
+      <FadeIn delay={150}>
+        <BottomRow>
+          <div>
+            {numberOf(user.public_repos, 'Public repo', 'Public repos')}
+          </div>
+          <div>{numberOf(user.followers, 'follower', 'followers')}</div>
+          <div>{user.following} Following</div>
+        </BottomRow>
+      </FadeIn>
     </Wrapper>
   );
 };

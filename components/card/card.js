@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
-  width: 500px;
   display: flex;
   padding: 25px;
   transition: 0.3s;
