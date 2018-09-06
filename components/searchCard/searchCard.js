@@ -8,7 +8,7 @@ import Form from './form';
 import BackButton from './backButton';
 
 const StyledCard = styled(Card)`
-  width: 450px;
+  min-width: 450px;
 `;
 
 class SearchCard extends React.Component {
