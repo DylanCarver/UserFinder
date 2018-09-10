@@ -1,20 +1,23 @@
 import React from 'react';
+import Box from 'components/box';
 import Input from 'components/input';
 import styled from 'styled-components';
 import FadeIn from 'components/fadeIn';
 
 const Text = styled.p`
   font-size: 12px;
-  margin-bottom: 40px;
 `;
 
-const FormWrapper = styled.div`
-  display: flex;
-  height: 200px;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-`;
+const FormWrapper = props => (
+  <Box
+    height={200}
+    display="flex"
+    alignItems="center"
+    flexDirection="column"
+    justifyContent="center"
+    {...props}
+  />
+);
 
 class Form extends React.Component {
   componentDidMount = () => {
@@ -22,7 +25,7 @@ class Form extends React.Component {
   };
 
   render() {
-    const { onSubmit, value, onChange, valid, reset } = this.props;
+    const { onSubmit, value, onChange, valid } = this.props;
 
     return (
       <FormWrapper>
@@ -33,16 +36,17 @@ class Form extends React.Component {
             <Text>Search for a GitHub user</Text>
           )}
         </FadeIn>
+        <Box my={20} />
         <FadeIn delay={100}>
           <form onSubmit={onSubmit}>
             <Input
+              value={value}
+              onChange={onChange}
+              invalid={valid === false}
+              placeholder="GitHub username"
               innerRef={input => {
                 this.inputField = input;
               }}
-              invalid={valid === false}
-              value={value}
-              onChange={onChange}
-              placeholder="GitHub username"
             />
           </form>
         </FadeIn>
