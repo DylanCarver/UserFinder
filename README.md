@@ -14,4 +14,4 @@ Checkout the [live demo](https://userfinder.now.sh/).
 
 - [ ] Add PropTypes
 - [ ] Add Docz
-- [ ] Add Styled system
+- [x] Add Styled system
