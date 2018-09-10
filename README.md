@@ -13,7 +13,7 @@ Checkout the [live demo](https://userfinder.now.sh/).
 ## To Do:
 
 - [ ] Add PropTypes
-- [ ] Add Docz
+- [ ] Add proper documentation with Docz
 
 ## Done:
 - [x] Add Styled system
